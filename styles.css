@@ -2,11 +2,14 @@
 
 :root {
     --bg-primary: #FFFFFF;
-    --bg-secondary: #F5F5F5;
+    --bg-secondary: #F4F6F7;
+    --bg-panel: #F1F1F1;
     --bg-tertiary: #E9E9E9;
     --text-primary: #111111;
     --text-secondary: #666666;
+    --text-small: #555555;
     --border-color: #DCDCDC;
+    --border-secondary: #E5E5E5;
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --max-width: 1440px;
     --header-height: 80px;
@@ -259,8 +262,9 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
+    background-color: #222222;
+    color: var(--bg-primary);
+    border-color: #222222;
     transform: translateY(-2px);
 }
 
@@ -272,7 +276,7 @@ body {
 
 .btn-secondary:hover {
     border-color: var(--text-primary);
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-panel);
     transform: translateY(-2px);
 }
 
@@ -355,7 +359,7 @@ body {
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 8rem 4rem;
-    background-color: var(--bg-primary);
+    background-color: var(--bg-secondary);
     border-top: 1px solid var(--border-color);
 }
 
@@ -528,7 +532,7 @@ body {
 /* Right Side: Canvas Visual */
 .project-visual {
     border: 1px solid var(--border-color);
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-panel);
     min-height: 380px;
     height: 100%;
     position: relative;
@@ -556,7 +560,7 @@ body {
     overflow: hidden;
     border-top: 0 solid var(--border-color);
     transition: max-height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), border-width 0.3s ease, margin 0.3s ease, padding 0.3s ease;
-    background-color: var(--bg-primary);
+    background-color: var(--bg-secondary);
 }
 
 .project-drawer.active {
@@ -609,7 +613,7 @@ body {
 }
 
 .doc-box {
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-panel);
     border: 1px solid var(--border-color);
     padding: 1.8rem;
 }
@@ -911,7 +915,7 @@ body {
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 8rem 4rem;
-    background-color: var(--bg-primary);
+    background-color: var(--bg-secondary);
     border-top: 1px solid var(--border-color);
     position: relative;
 }
@@ -928,7 +932,7 @@ body {
     flex-direction: column;
     gap: 1.5rem;
     border: 1px solid var(--border-color);
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-panel);
     padding: 2.5rem;
     position: relative;
     min-height: 520px;
@@ -965,7 +969,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    background-color: var(--bg-primary);
+    background-color: var(--bg-panel);
     transition: border-color 0.4s ease;
 }
 
@@ -1572,7 +1576,7 @@ body {
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 8rem 4rem 0 4rem;
-    background-color: var(--bg-primary);
+    background-color: var(--bg-secondary);
     border-top: 1px solid var(--border-color);
     position: relative;
 }
@@ -1611,7 +1615,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-panel);
     border: 1px solid var(--border-color);
     padding: 2rem;
     margin-bottom: 3rem;
@@ -1688,7 +1692,7 @@ body {
 
 .connect-right {
     border: 1px solid var(--border-color);
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-panel);
     min-height: 480px;
     position: relative;
     overflow: hidden;
@@ -1705,12 +1709,13 @@ body {
 
 /* Footer Section */
 .footer {
-    border-top: 1px solid var(--border-color);
-    padding: 3rem 0;
+    border-top: 1px solid #333333;
+    padding: 4rem 4rem;
+    margin: 0 -4rem;
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
-    background-color: var(--bg-primary);
+    background-color: #111111;
 }
 
 .footer-top {
@@ -1723,12 +1728,12 @@ body {
     font-size: 0.9rem;
     font-weight: 700;
     letter-spacing: 0.1em;
-    color: var(--text-primary);
+    color: #FFFFFF;
 }
 
 .footer-details {
     font-size: 0.8rem;
-    color: var(--text-secondary);
+    color: #BDBDBD;
 }
 
 .footer-bottom {
@@ -1739,7 +1744,7 @@ body {
 
 .footer-copy {
     font-size: 0.75rem;
-    color: var(--text-secondary);
+    color: #BDBDBD;
 }
 
 .back-to-top {
@@ -1752,12 +1757,12 @@ body {
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.1em;
-    color: var(--text-secondary);
+    color: #BDBDBD;
     transition: color 0.2s ease;
 }
 
 .back-to-top:hover {
-    color: var(--text-primary);
+    color: #FFFFFF;
 }
 
 .back-to-top svg {
@@ -1807,6 +1812,10 @@ body {
     }
     .connect-container {
         gap: 2.5rem;
+    }
+    .footer {
+        padding: 4rem 2rem;
+        margin: 0 -2rem;
     }
 }
 
@@ -2054,9 +2063,12 @@ body {
     .connect-section {
         padding: 5rem 2rem 0 2rem;
     }
-
     .connect-container {
         margin-bottom: 4rem;
+    }
+    .footer {
+        padding: 4rem 2rem;
+        margin: 0 -2rem;
     }
 
     .availability-box {
@@ -2150,5 +2162,9 @@ body {
     }
     .dir-link {
         font-size: 0.85rem;
+    }
+    .footer {
+        padding: 4rem 1.5rem;
+        margin: 0 -1.5rem;
     }
 }
