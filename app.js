@@ -425,12 +425,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         const nodes = [
-            { id: 'sensors', label: 'SENSORS', sub: 'LiDAR / RADAR / IMU / CAM', x: 0.15, y: 0.3, width: 140, height: 45 },
-            { id: 'perception', label: 'PERCEPTION', sub: 'State Estimation / PyTorch', x: 0.5, y: 0.3, width: 140, height: 45 },
-            { id: 'control', label: 'CONTROLLER', sub: 'MATLAB / Simulink Loop', x: 0.85, y: 0.3, width: 140, height: 45 },
-            { id: 'actuation', label: 'ACTUATION', sub: 'CAN FD / FlexRay / LIN', x: 0.85, y: 0.7, width: 140, height: 45 },
-            { id: 'plant', label: 'VEHICLE MODEL', sub: 'Dynamics / ISO 26262', x: 0.5, y: 0.7, width: 140, height: 45 },
-            { id: 'validation', label: 'V&V CORE', sub: 'V-Model / Hardware-in-Loop', x: 0.15, y: 0.7, width: 140, height: 45 }
+            { id: 'sensors', label: 'VEHICLE SYSTEMS', sub: 'Digital Vehicle Functions', x: 0.15, y: 0.3, width: 145, height: 45 },
+            { id: 'perception', label: 'SYSTEM INTEGRATION', sub: 'CAN / LIN / Ethernet / FlexRay', x: 0.5, y: 0.3, width: 155, height: 45 },
+            { id: 'control', label: 'SIMULATION', sub: 'MATLAB / Simulink Models', x: 0.85, y: 0.3, width: 145, height: 45 },
+            { id: 'actuation', label: 'VERIFICATION', sub: 'V-Model Methodology', x: 0.85, y: 0.7, width: 145, height: 45 },
+            { id: 'plant', label: 'VALIDATION', sub: 'ISO 26262 Standards', x: 0.5, y: 0.7, width: 145, height: 45 },
+            { id: 'validation', label: 'TECHNICAL ANALYSIS', sub: 'Python / PyTorch Simulation', x: 0.15, y: 0.7, width: 145, height: 45 }
         ];
 
         const connections = [
