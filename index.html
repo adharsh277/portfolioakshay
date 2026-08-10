@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Akshay Unnikrishnan - Portfolio. M.Sc. Commercial Vehicle Technology student at RPTU Kaiserslautern. Automotive systems engineering, simulation, and validation.">
+    <title>Akshay Unnikrishnan | Automotive Systems Engineer</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">AKSHAY UNNIKRISHNAN</a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active" data-i18n="nav-home">Home</a>
+                <a href="#selected-work" class="nav-link" data-i18n="nav-work">Selected Work</a>
+                <a href="#experience" class="nav-link" data-i18n="nav-experience">Experience</a>
+                <a href="#systems" class="nav-link" data-i18n="nav-systems">Systems</a>
+                <a href="#credentials" class="nav-link" data-i18n="nav-credentials">Credentials</a>
+                <a href="#connect" class="nav-link" data-i18n="nav-connect">Let's Connect</a>
+            </nav>
+            <div class="nav-right">
+                <span class="lang-selector" id="langSelector">
+                    <span class="lang active" data-lang="en">EN</span> / <span class="lang" data-lang="de">DE</span>
+                </span>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-left">
+                    <div class="eyebrow-container">
+                        <span class="eyebrow" data-i18n="hero-eyebrow">SYSTEMS ENGINEERING • AUTOMOTIVE • VEHICLE TECHNOLOGY</span>
+                        <span class="category" data-i18n="hero-category">AUTOMOTIVE SYSTEMS</span>
+                    </div>
+                    
+                    <h1 class="headline" data-i18n="hero-headline">Engineering Systems<br>From Concept<br>to Validation</h1>
+                    
+                    <p class="introduction" data-i18n="hero-intro">
+                        I'm Akshay Unnikrishnan, an M.Sc. Commercial Vehicle Technology student focused on automotive systems, digital vehicle functions, simulation, system integration, and validation.
+                    </p>
+                    
+                    <div class="cta-container">
+                        <a href="#selected-work" class="btn btn-primary" data-i18n="hero-cta-work">Explore My Work</a>
+                        <a href="CV_Akshay_Unnikrishnan.pdf" download class="btn btn-secondary" id="heroCvBtn">
+                            <span data-i18n="hero-cta-cv">View CV</span>
+                            <svg class="download-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-right" id="diagramWrapper">
+                    <canvas id="diagramCanvas"></canvas>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <span class="scroll-text" data-i18n="hero-scroll">SCROLL TO EXPLORE</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <section id="selected-work" class="work-section">
+            <div class="section-header">
+                <span class="section-eyebrow" data-i18n="work-eyebrow">SELECTED WORK</span>
+                <h2 class="section-headline" data-i18n="work-headline">Engineering problems,<br>modelled, simulated<br>and validated.</h2>
+                <p class="section-subtext" data-i18n="work-subtext">A selection of academic engineering projects spanning autonomous vehicles, hybrid-electric systems, simulation, system analysis and mechanical development.</p>
+            </div>
+
+            <div class="projects-list">
+                <!-- Project 01 -->
+                <div class="project-card" id="project-01">
+                    <div class="project-info">
+                        <span class="project-num">01</span>
+                        <h3 class="project-title" data-i18n="proj1-title">AUTONOMOUS VEHICLE<br>MOTION PREDICTION</h3>
+                        <span class="project-date">10.2025 — 03.2026</span>
+                        <p class="project-desc" data-i18n="proj1-desc">Deep-learning-based trajectory prediction for autonomous driving environments.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>PyTorch</span>
+                            <span>NumPy</span>
+                            <span>Pandas</span>
+                            <span>LSTM</span>
+                            <span>MLP</span>
+                            <span>Data Analysis</span>
+                        </div>
+                        <div class="project-stat">
+                            <span class="stat-val">100,000+</span>
+                            <span class="stat-label" data-i18n="proj1-stat">INTERACTION DATA POINTS</span>
+                        </div>
+                        <button class="project-toggle" data-project="01" data-i18n="toggle-view">
+                            VIEW PROJECT
+                            <svg class="arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="project-visual" id="visual-01">
+                        <canvas id="canvas-01"></canvas>
+                    </div>
+                    
+                    <!-- Expandable Drawer -->
+                    <div class="project-drawer" id="drawer-01">
+                        <div class="drawer-content">
+                            <div class="drawer-grid">
+                                <div class="drawer-column">
+                                    <h4 data-i18n="drawer-tasks-header">Key Project Tasks & Execution</h4>
+                                    <ul>
+                                        <li data-i18n="proj1-bullet1">Processed and analysed approximately 100,000 interaction data points for training and validation.</li>
+                                        <li data-i18n="proj1-bullet2">Performed data preprocessing, model evaluation and visualization using Python, NumPy, Pandas and PyTorch.</li>
+                                        <li data-i18n="proj1-bullet3">Structured evaluation of movement data for assessing driving-environment and prediction models.</li>
+                                    </ul>
+                                </div>
+                                <div class="drawer-column">
+                                    <h4 data-i18n="drawer-arch-header-1">System & Model Architecture</h4>
+                                    <div class="doc-box">
+                                        <p><strong>Framework:</strong> PyTorch Deep Learning Pipeline</p>
+                                        <p><strong data-i18n="drawer-models">Models:</strong> Long Short-Term Memory (LSTM) recurrent networks coupled with Multi-Layer Perceptrons (MLP) for temporal trajectory processing.</p>
+                                        <p><strong data-i18n="drawer-pipeline">Data Pipeline:</strong> Custom Pandas & NumPy preprocessing loaders executing min-max normalization, coordinate transformations, and sequence windowing.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 02 -->
+                <div class="project-card" id="project-02">
+                    <div class="project-info">
+                        <span class="project-num">02</span>
+                        <h3 class="project-title" data-i18n="proj2-title">HYBRID ELECTRIC<br>VEHICLE SIMULATION</h3>
+                        <span class="project-date">05.2025 — 09.2025</span>
+                        <p class="project-desc" data-i18n="proj2-desc">Development of a rule-based energy-management strategy for a hybrid vehicle.</p>
+                        <div class="project-tech">
+                            <span>MATLAB</span>
+                            <span>Simulink</span>
+                            <span>Control Algorithms</span>
+                            <span>Model-Based Development</span>
+                        </div>
+                        <div class="project-stat">
+                            <span class="stat-val">29%</span>
+                            <span class="stat-label" data-i18n="proj2-stat">FUEL CONSUMPTION REDUCTION</span>
+                        </div>
+                        <button class="project-toggle" data-project="02" data-i18n="toggle-view">
+                            VIEW PROJECT
+                            <svg class="arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="project-visual" id="visual-02">
+                        <canvas id="canvas-02"></canvas>
+                    </div>
+
+                    <!-- Expandable Drawer -->
+                    <div class="project-drawer" id="drawer-02">
+                        <div class="drawer-content">
+                            <div class="drawer-grid">
+                                <div class="drawer-column">
+                                    <h4 data-i18n="drawer-tasks-header">Key Project Tasks & Execution</h4>
+                                    <ul>
+                                        <li data-i18n="proj2-bullet1">Modelled drivetrain, energy flows and driving cycles in MATLAB/Simulink.</li>
+                                        <li data-i18n="proj2-bullet2">Simulated and validated the model using realistic driving and system data.</li>
+                                        <li data-i18n="proj2-bullet3">Analysed simulation results and documented fuel consumption properties.</li>
+                                    </ul>
+                                </div>
+                                <div class="drawer-column">
+                                    <h4 data-i18n="drawer-arch-header-2">Simulation Architecture</h4>
+                                    <div class="doc-box">
+                                        <p><strong>Environment:</strong> MATLAB / Simulink Simscape Drivetrain Library</p>
+                                        <p><strong data-i18n="drawer-strategy">Strategy:</strong> Rule-based state machine logic evaluating battery SOC limits, engine torque curves, and real-world driving cycles.</p>
+                                        <p><strong data-i18n="drawer-target">Target:</strong> Optimizing fuel economy and charge-sustaining states.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 03 -->
+                <div class="project-card" id="project-03">
+                    <div class="project-info">
+                        <span class="project-num">03</span>
+                        <h3 class="project-title" data-i18n="proj3-title">ELECTROMECHANICAL<br>1-DOF SIMULATION MODEL</h3>
+                        <span class="project-date">05.2024 — 09.2024</span>
+                        <p class="project-desc" data-i18n="proj3-desc">Development of an electromechanical simulation model for analysing system behaviour.</p>
+                        <div class="project-tech">
+                            <span>MATLAB</span>
+                            <span>Simulink</span>
+                            <span>Simscape</span>
+                            <span>System Analysis</span>
+                        </div>
+                        <div class="project-stat">
+                            <span class="stat-val">1-DOF</span>
+                            <span class="stat-label" data-i18n="proj3-stat">SYSTEM MODEL</span>
+                        </div>
+                        <button class="project-toggle" data-project="03" data-i18n="toggle-view">
+                            VIEW PROJECT
+                            <svg class="arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="project-visual" id="visual-03">
+                        <canvas id="canvas-03"></canvas>
+                    </div>
+
+                    <!-- Expandable Drawer -->
+                    <div class="project-drawer" id="drawer-03">
+                        <div class="drawer-content">
+                            <div class="drawer-grid">
+                                <div class="drawer-column">
+                                    <h4 data-i18n="drawer-tasks-header">Key Project Tasks & Execution</h4>
+                                    <ul>
+                                        <li data-i18n="proj3-bullet1">Defined technical requirements and modelling assumptions.</li>
+                                        <li data-i18n="proj3-bullet2">Created and executed test cases for technical validation.</li>
+                                        <li data-i18n="proj3-bullet3">Analysed parameter dependencies and structured technical results.</li>
+                                    </ul>
+                                </div>
+                                <div class="drawer-column">
+                                    <h4 data-i18n="drawer-arch-header-3">System & Model Architecture</h4>
+                                    <div class="doc-box">
+                                        <p><strong data-i18n="drawer-modeling">Modeling:</strong> Simulink physical system modeling combined with Simscape electromechanical port diagrams.</p>
+                                        <p><strong data-i18n="drawer-validation">Validation:</strong> Verification and Validation test sweeps verifying dynamic frequency responses and step-input stabilization profiles.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 04 -->
+                <div class="project-card" id="project-04">
+                    <div class="project-info">
+                        <span class="project-num">04</span>
+                        <h3 class="project-title" data-i18n="proj4-title">QUAD BIKE / ATV<br>DEVELOPMENT</h3>
+                        <span class="project-date">07.2019 — 07.2021</span>
+                        <p class="project-desc" data-i18n="proj4-desc">Mechanical development and product development of technical components for a Quad Bike / ATV project.</p>
+                        <div class="project-tech">
+                            <span>SolidWorks</span>
+                            <span>ANSYS</span>
+                            <span>Technical Documentation</span>
+                            <span>Mechanical Design</span>
+                        </div>
+                        <div class="project-stat">
+                            <span class="stat-val">3D CAD</span>
+                            <span class="stat-label" data-i18n="proj4-stat">COMPONENTS & ASSEMBLY</span>
+                        </div>
+                        <button class="project-toggle" data-project="04" data-i18n="toggle-view">
+                            VIEW PROJECT
+                            <svg class="arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="project-visual" id="visual-04">
+                        <canvas id="canvas-04"></canvas>
+                    </div>
+
+                    <!-- Expandable Drawer -->
+                    <div class="project-drawer" id="drawer-04">
+                        <div class="drawer-content">
+                            <div class="drawer-grid">
+                                <div class="drawer-column">
+                                    <h4 data-i18n="drawer-tasks-header">Key Project Tasks & Execution</h4>
+                                    <ul>
+                                        <li data-i18n="proj4-bullet1">Supported mechanical and product development of technical components.</li>
+                                        <li data-i18n="proj4-bullet2">Contributed to optimization of components, assemblies and technical solutions.</li>
+                                        <li data-i18n="proj4-bullet3">Created 3D models, assemblies, and engineering-compliant technical drawings.</li>
+                                        <li data-i18n="proj4-bullet4">Documented technical results and independently handled structural engineering tasks.</li>
+                                    </ul>
+                                </div>
+                                <div class="drawer-column">
+                                    <h4 data-i18n="drawer-arch-header-4">Mechanical & FEA Architecture</h4>
+                                    <div class="doc-box">
+                                        <p><strong>CAD System:</strong> SolidWorks 3D Modeling and assembly management.</p>
+                                        <p><strong data-i18n="drawer-fea">FEA Environment:</strong> ANSYS Workbench structural, stress, and fatigue optimization sweeps for chassis/suspension components.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="journey" class="journey-section">
+            <div class="section-header">
+                <span class="section-eyebrow" data-i18n="journey-eyebrow">ENGINEERING JOURNEY</span>
+                <h2 class="section-headline" data-i18n="journey-headline">From mechanical foundations<br>to automotive systems engineering.</h2>
+            </div>
+
+            <div class="timeline-container">
+                <!-- Vertical Line -->
+                <div class="timeline-track">
+                    <div class="timeline-progress" id="timelineProgress"></div>
+                </div>
+
+                <!-- Timeline Step 01 -->
+                <div class="timeline-step" id="step-01">
+                    <div class="timeline-meta">
+                        <span class="timeline-year">2017 — 2021</span>
+                        <div class="timeline-node"></div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <span class="card-subtitle" data-i18n="j-step1-sub">TIMELINE 01 • COMPLETED</span>
+                            <h3 class="card-title" data-i18n="j-step1-title">B.Tech Mechanical Engineering</h3>
+                            <span class="card-institution" data-i18n="j-step1-inst">A P J Abdul Kalam Technological University, Kerala, India</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="journey-grid">
+                                <div class="journey-column">
+                                    <h4 data-i18n="j-step1-col1">Mechanical Foundations</h4>
+                                    <ul class="journey-list">
+                                        <li data-i18n="j-skill-design">Mechanical Design</li>
+                                        <li data-i18n="j-skill-thermo">Thermodynamics</li>
+                                        <li data-i18n="j-skill-fluid">Fluid Mechanics</li>
+                                        <li data-i18n="j-skill-mfg">Manufacturing</li>
+                                    </ul>
+                                </div>
+                                <div class="journey-column">
+                                    <h4 data-i18n="j-step1-col2">System Integration & CAD</h4>
+                                    <ul class="journey-list">
+                                        <li data-i18n="j-skill-mechatronics">Mechatronics</li>
+                                        <li data-i18n="j-skill-cad">CAD / CAE</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Step 02 -->
+                <div class="timeline-step" id="step-02">
+                    <div class="timeline-meta">
+                        <span class="timeline-year">2023 — PRESENT</span>
+                        <div class="timeline-node"></div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <span class="card-subtitle" data-i18n="j-step2-sub">TIMELINE 02 • IN PROGRESS</span>
+                            <h3 class="card-title" data-i18n="j-step2-title">M.Sc. Commercial Vehicle Technology</h3>
+                            <span class="card-institution" data-i18n="j-step2-inst">RPTU Kaiserslautern, Germany</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="journey-grid">
+                                <div class="journey-column">
+                                    <h4 data-i18n="j-step2-col1">Vehicle Architecture</h4>
+                                    <ul class="journey-list">
+                                        <li data-i18n="j-skill-emobility">Electromobility</li>
+                                        <li data-i18n="j-skill-dynamics">Vehicle Dynamics</li>
+                                        <li><strong data-i18n="j-skill-comm">Vehicle Communication:</strong>
+                                            <span class="journey-sublist">CAN, LIN, Ethernet, FlexRay</span>
+                                            <span class="journey-sublist" data-i18n="j-skill-diag">Vehicle Diagnostics</span>
+                                            <span class="journey-sublist" data-i18n="j-skill-iso">System Integration & ISO 26262</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="journey-column">
+                                    <h4 data-i18n="j-step2-col2">Software & Verification</h4>
+                                    <ul class="journey-list">
+                                        <li><strong data-i18n="j-skill-sw">Automotive Software & Systems Eng:</strong>
+                                            <span class="journey-sublist">V-Model</span>
+                                            <span class="journey-sublist" data-i18n="j-skill-integration">Integration</span>
+                                            <span class="journey-sublist" data-i18n="j-skill-vv">Verification & Validation</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transition Statement -->
+            <div class="journey-transition-container">
+                <div class="journey-transition-step">
+                    <span class="transition-num">01</span>
+                    <span class="transition-title" data-i18n="jt-1">MECHANICAL FOUNDATION</span>
+                </div>
+                <div class="journey-transition-arrow">↓</div>
+                <div class="journey-transition-step">
+                    <span class="transition-num">02</span>
+                    <span class="transition-title" data-i18n="jt-2">VEHICLE TECHNOLOGY</span>
+                </div>
+                <div class="journey-transition-arrow">↓</div>
+                <div class="journey-transition-step">
+                    <span class="transition-num">03</span>
+                    <span class="transition-title" data-i18n="jt-3">SYSTEMS ENGINEERING</span>
+                </div>
+            </div>
+        </section>
+        
+        <section id="systems" class="capabilities-section">
+            <div class="section-header">
+                <span class="section-eyebrow" data-i18n="sys-eyebrow">SYSTEMS & CAPABILITIES</span>
+                <h2 class="section-headline" data-i18n="sys-headline">Engineering Across<br>the Vehicle System</h2>
+                <p class="section-subtext" data-i18n="sys-subtext">From system architecture and vehicle communication to simulation, validation and data-driven modelling.</p>
+            </div>
+
+            <!-- Desktop Capabilities Layout -->
+            <div class="capabilities-desktop-layout">
+                <div class="capability-map-wrapper">
+                    <span class="map-label" data-i18n="sys-map-label">ENGINEERING CAPABILITY MAP</span>
+                    <div class="capability-canvas-container" id="capabilityMapContainer">
+                        <canvas id="capabilityCanvas"></canvas>
+                    </div>
+                </div>
+
+                <div class="capability-detail-panel" id="capabilityDetailPanel">
+                    <span class="detail-label" id="detailCategoryNum">01</span>
+                    <h3 class="detail-title" id="detailCategoryTitle">SYSTEMS ENGINEERING</h3>
+                    <p class="detail-desc" id="detailCategoryDesc">Methods and practices used to structure, integrate and validate complex automotive vehicles.</p>
+                    <div class="detail-skills-list" id="detailSkillsList">
+                        <!-- Populated dynamically via JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Capabilities Layout (Accordion) -->
+            <div class="capabilities-mobile-layout" id="capabilitiesAccordion">
+                <!-- Populated dynamically via JS -->
+            </div>
+
+            <!-- Bottom Transition Details -->
+            <div class="capabilities-transition-container">
+                <div class="capabilities-transition-text">
+                    <span data-i18n="syst-1">SYSTEMS THINKING</span>
+                    <span class="plus-sign">+</span>
+                    <span data-i18n="syst-2">ENGINEERING ANALYSIS</span>
+                    <span class="plus-sign">+</span>
+                    <span data-i18n="syst-3">VALIDATION</span>
+                </div>
+            </div>
+        </section>
+        
+        <section id="credentials" class="credentials-section">
+            <div class="section-header">
+                <span class="section-eyebrow" data-i18n="cred-eyebrow">CREDENTIALS</span>
+                <h2 class="section-headline" data-i18n="cred-headline">Built on Engineering Foundations</h2>
+                <p class="section-subtext" data-i18n="cred-subtext">Academic training, engineering projects and certifications shaping a systems-focused automotive perspective.</p>
+            </div>
+
+            <!-- Education Area -->
+            <div class="credentials-area">
+                <span class="area-label" data-i18n="cred-area-edu">01 — EDUCATION</span>
+                <div class="education-grid">
+                    <!-- M.Sc. Card -->
+                    <div class="education-card" id="edu-msc">
+                        <div class="edu-info">
+                            <div class="edu-header">
+                                <span class="edu-badge" data-i18n="edu-badge-msc">CURRENT PROGRAM</span>
+                                <span class="edu-date">10.2023 — PRESENT</span>
+                            </div>
+                            <h3 class="edu-title">M.Sc. Commercial Vehicle Technology</h3>
+                            <span class="edu-degree" data-i18n="edu-deg-msc">M.Sc. Nutzfahrzeugtechnik (Hon)</span>
+                            <span class="edu-institution">Rheinland-Pfälzische Technische Universität Kaiserslautern</span>
+                            <span class="edu-location" data-i18n="edu-loc-msc">Kaiserslautern, Germany</span>
+                            <div class="edu-curriculum">
+                                <h4 data-i18n="edu-skills-header-1">Key Specializations</h4>
+                                <ul class="edu-skills">
+                                    <li data-i18n="j-skill-emobility">Electromobility</li>
+                                    <li data-i18n="j-skill-dynamics">Vehicle Dynamics</li>
+                                    <li data-i18n="edu-spec-comm">Vehicle Communication</li>
+                                    <li data-i18n="edu-spec-sw">Automotive Software & Systems Engineering</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="edu-visual">
+                            <canvas id="canvas-msc"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- B.Tech. Card -->
+                    <div class="education-card" id="edu-btech">
+                        <div class="edu-info">
+                            <div class="edu-header">
+                                <span class="edu-badge" data-i18n="edu-badge-btech">FOUNDATION</span>
+                                <span class="edu-date">08.2017 — 07.2021</span>
+                            </div>
+                            <h3 class="edu-title">B.Tech. Mechanical Engineering</h3>
+                            <span class="edu-degree" data-i18n="edu-deg-btech">B.Tech. Maschinenbau (Hon)</span>
+                            <span class="edu-institution">A P J Abdul Kalam Technological University</span>
+                            <span class="edu-location" data-i18n="edu-loc-btech">Kerala, India</span>
+                            <div class="edu-curriculum">
+                                <h4 data-i18n="edu-skills-header-2">Core Engineering Disciplines</h4>
+                                <ul class="edu-skills">
+                                    <li data-i18n="edu-spec-ice">Internal Combustion Engines</li>
+                                    <li data-i18n="j-skill-thermo">Thermodynamics</li>
+                                    <li data-i18n="j-skill-fluid">Fluid Mechanics</li>
+                                    <li data-i18n="j-skill-mfg">Manufacturing</li>
+                                    <li data-i18n="j-skill-cad">CAD / CAE</li>
+                                    <li data-i18n="j-skill-mechatronics">Mechatronics</li>
+                                    <li data-i18n="j-skill-design">Mechanical Design</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="edu-visual">
+                            <canvas id="canvas-btech"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications Area -->
+            <div class="credentials-area">
+                <span class="area-label" data-i18n="cred-area-cert">02 — CERTIFICATIONS</span>
+                <div class="certifications-grid" id="certificationsGrid">
+                    <!-- Populated dynamically via JS -->
+                </div>
+            </div>
+
+            <!-- Bottom Transition Details -->
+            <div class="credentials-transition-container">
+                <div class="credentials-transition-text">
+                    <span data-i18n="credt-1">ENGINEERING KNOWLEDGE</span>
+                    <span class="arrow-sign">→</span>
+                    <span data-i18n="credt-2">ENGINEERING PRACTICE</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Credentials Detail Modal -->
+        <div class="credential-modal" id="credentialModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <div class="modal-overlay" id="modalOverlay"></div>
+            <div class="modal-container">
+                <button class="modal-close" id="modalClose" aria-label="Close Modal">×</button>
+                <div class="modal-body">
+                    <span class="modal-badge" id="modalBadge" data-i18n="modal-badge">CERTIFICATION</span>
+                    <h3 class="modal-title" id="modalTitle">Introduction to Model-Based Systems Engineering</h3>
+                    <div class="modal-meta-row">
+                        <div class="meta-item">
+                            <span class="meta-label" data-i18n="modal-label-provider">PROVIDER</span>
+                            <span class="meta-value" id="modalProvider">Coursera</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label" data-i18n="modal-label-date">DATE</span>
+                            <span class="meta-value" id="modalDate">12.2025</span>
+                        </div>
+                    </div>
+                    <div class="modal-verification-box">
+                        <span class="box-label" data-i18n="modal-label-integrity">CREDENTIAL INTEGRITY</span>
+                        <p data-i18n="modal-verify-text">This verification links to the official credential database confirmation for this certification. A PDF transcript or online certificate file can be attached here.</p>
+                        <div class="ver-link">
+                            <span data-i18n="modal-status">VERIFICATION STATUS: ACTIVE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <section id="connect" class="connect-section">
+            <div class="connect-container">
+                <div class="connect-left">
+                    <span class="section-eyebrow" data-i18n="conn-eyebrow">LET'S CONNECT</span>
+                    <h2 class="connect-headline" data-i18n="conn-headline">Building the Next Generation<br>of Automotive Systems.</h2>
+                    <p class="connect-subtext" data-i18n="conn-subtext">
+                        Interested in automotive systems, engineering analysis, simulation, validation and opportunities to contribute to technically challenging projects.
+                    </p>
+
+                    <!-- Availability Details -->
+                    <div class="availability-box">
+                        <div class="availability-item">
+                            <span class="avail-label" data-i18n="conn-avail-lbl1">CURRENT AVAILABILITY</span>
+                            <span class="avail-value" data-i18n="conn-avail-val1">MANDATORY INTERNSHIP<br>GERMANY</span>
+                        </div>
+                        <div class="availability-item">
+                            <span class="avail-label" data-i18n="conn-avail-lbl2">AVAILABLE NOW</span>
+                            <span class="avail-value" data-i18n="conn-avail-val2">MOBILE WITHIN GERMANY</span>
+                        </div>
+                    </div>
+
+                    <!-- Contact Directory -->
+                    <div class="contact-directory">
+                        <div class="directory-row">
+                            <span class="dir-label" data-i18n="conn-dir-email">EMAIL</span>
+                            <a href="mailto:unnikrishnanakshay10@gmail.com" class="dir-link">unnikrishnanakshay10@gmail.com ↗</a>
+                        </div>
+                        <div class="directory-row">
+                            <span class="dir-label" data-i18n="conn-dir-linkedin">LINKEDIN</span>
+                            <a href="https://linkedin.com/in/u-akshay" target="_blank" rel="noopener" class="dir-link">linkedin.com/in/u-akshay ↗</a>
+                        </div>
+                        <div class="directory-row">
+                            <span class="dir-label" data-i18n="conn-dir-phone">PHONE</span>
+                            <a href="tel:+4915760999741" class="dir-link">+49 1576 0999741 ↗</a>
+                        </div>
+                        <div class="directory-row">
+                            <span class="dir-label" data-i18n="conn-dir-loc">LOCATION</span>
+                            <span class="dir-value" data-i18n="conn-dir-loc-val">Kaiserslautern, Germany</span>
+                        </div>
+                    </div>
+
+                    <!-- CV Downloader Button -->
+                    <div class="connect-cta-row">
+                        <a href="CV_Akshay_Unnikrishnan.pdf" download class="btn btn-secondary" id="connectCvBtn">
+                            <span data-i18n="conn-cta-cv">DOWNLOAD CV</span>
+                            <svg class="download-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="connect-right" id="convergenceWrapper">
+                    <canvas id="convergenceCanvas"></canvas>
+                </div>
+            </div>
+
+            <!-- Footer Details -->
+            <footer class="footer">
+                <div class="footer-top">
+                    <span class="footer-name">AKSHAY UNNIKRISHNAN</span>
+                    <span class="footer-details" data-i18n="footer-details">M.Sc. Commercial Vehicle Technology • Kaiserslautern, Germany</span>
+                </div>
+                <div class="footer-bottom">
+                    <span class="footer-copy">© 2026 Akshay Unnikrishnan</span>
+                    <button class="back-to-top" id="backToTopBtn">
+                        <span data-i18n="footer-top">BACK TO TOP</span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="19" x2="12" y2="5"></line>
+                            <polyline points="5 12 12 5 19 12"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </footer>
+        </section>
+    </main>
+
+    <!-- Script -->
+    <script src="app.js"></script>
+</body>
+</html>
