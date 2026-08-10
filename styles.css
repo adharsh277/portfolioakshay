@@ -553,6 +553,20 @@ body {
     display: block;
 }
 
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(100%);
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.project-card:hover .project-img {
+    filter: grayscale(0%);
+    transform: scale(1.02);
+}
+
 /* Expandable Drawer */
 .project-drawer {
     grid-column: 1 / span 2;
